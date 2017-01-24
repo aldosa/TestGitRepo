@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 
 namespace Test_console_app
 {
+
+
     class RandomGreeting
     {
         Random r = new Random();
+        Dictionary<int, string> LocalGreetings;
 
         public RandomGreeting()
         {
+            LocalGreetings = Greetings;
+        }
+
+        public void SetDictionary(Dictionary<int, string> greetings)
+        {
+            LocalGreetings = greetings;
         }
 
         public string GetRandomGreeting()
         {
-            return Greetings[r.Next(0, 6)];
+            int nextValue = (int)((LocalGreetings.Count() - 1) * Math.Round(r.NextDouble()));
+            var local = LocalGreetings.ToArray();
+            string toReturn = local[nextValue].Value;
+            LocalGreetings = Greetings;
+
+            return toReturn;
 
         }
+
 
         Dictionary<int, string> Greetings = new Dictionary<int, string>()
         {

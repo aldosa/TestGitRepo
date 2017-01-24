@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomGreeting.cs" />
+    <Compile Include="RandomInternationalGreeting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

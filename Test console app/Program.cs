@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,10 +11,15 @@ namespace Test_console_app
     {
         static void Main(string[] args)
         {
-            var rg = new RandomGreeting();
+            var rig = new RandomInternationalGreeting();
 
-            for (int i = 0; i < 5; i++)
-                Console.WriteLine(rg.GetRandomGreeting());
+            for (int i = 0; i < 25; i++)
+                Console.WriteLine(rig.GetRandomGreeting("English"));
+
+            for (int i = 0; i < 25; i++)
+                Console.WriteLine(rig.GetRandomGreeting("Swahili"));
+
+
         }
     }
 }
