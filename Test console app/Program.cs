@@ -10,7 +10,10 @@ namespace Test_console_app
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world!");
+            var rg = new RandomGreeting();
+
+            for (int i = 0; i < 5; i++)
+                Console.WriteLine(rg.GetRandomGreeting());
         }
     }
 }
