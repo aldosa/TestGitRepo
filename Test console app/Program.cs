@@ -13,13 +13,16 @@ namespace Test_console_app
         {
             var rig = new RandomInternationalGreeting();
 
-            for (int i = 0; i < 25; i++)
+            for (int i = 0; i < 5; i++)
                 Console.WriteLine(rig.GetRandomGreeting("English"));
 
-            for (int i = 0; i < 25; i++)
+            Console.WriteLine();
+
+            for (int i = 0; i < 5; i++)
                 Console.WriteLine(rig.GetRandomGreeting("Swahili"));
-
-
+            
         }
+
     }
+
 }

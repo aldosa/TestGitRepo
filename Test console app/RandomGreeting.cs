@@ -25,9 +25,10 @@ namespace Test_console_app
 
         public string GetRandomGreeting()
         {
-            int nextValue = (int)((LocalGreetings.Count() - 1) * Math.Round(r.NextDouble()));
-            var local = LocalGreetings.ToArray();
-            string toReturn = local[nextValue].Value;
+            int nextValue = (int)(Math.Round((LocalGreetings.Count() - 1) * r.NextDouble()));
+
+            //bug fix
+            string toReturn = LocalGreetings.ElementAt(nextValue).Value;
             LocalGreetings = Greetings;
 
             return toReturn;
