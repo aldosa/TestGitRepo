@@ -45,6 +45,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="RandomGreeting.cs" />
+    <Compile Include="RandomInternationalGreeting.cs" />
+>>>>>>> release/release_branch_for_1.0
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
